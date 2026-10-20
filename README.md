@@ -1,40 +1,68 @@
-# Customer Churn Classification
+# CIFAR-10 Image Classification with MobileNetV2
 
-This project analyzes customer churn data to predict whether a customer will churn or not. It involves data exploration, preprocessing, and building and evaluating several classification models.
+This project demonstrates training a MobileNetV2 model for image classification on the CIFAR-10 dataset. It includes a Jupyter Notebook for training and a Python script for inference.
+
+## Folder Structure
+
+```
+.
+├── cifar10_mobilenetv2.keras
+├── inference.py
+├── OIP.jpg
+├── requirements.txt
+├── train.ipynb
+├── training_curves.png
+└── venv/
+```
+
+- `cifar10_mobilenetv2.keras`: The trained Keras model.
+- `inference.py`: Script to run inference on a single image.
+- `OIP.jpg`: An example image for inference.
+- `requirements.txt`: Python dependencies.
+- `train.ipynb`: Jupyter Notebook for training the model.
+- `training_curves.png`: Plot of training and validation accuracy and loss.
 
 ## Environment Setup
 
-1.  **Clone the repository or download the files.**
+1.  **Create a virtual environment:**
 
-2.  **Create a virtual environment (recommended):**
     ```bash
     python -m venv venv
     ```
 
-3.  **Activate the virtual environment:**
-    *   On Windows:
+2.  **Activate the virtual environment:**
+
+    -   **Windows:**
         ```bash
         .\venv\Scripts\activate
         ```
-    *   On macOS/Linux:
+    -   **macOS/Linux:**
         ```bash
         source venv/bin/activate
         ```
 
-4.  **Install the required packages:**
+3.  **Install the required dependencies:**
+
     ```bash
     pip install -r requirements.txt
     ```
 
-## How to Run
+## Running the code
 
-1.  **Start Jupyter Notebook or JupyterLab:**
+### Training
+
+1.  **Start Jupyter Notebook:**
+
     ```bash
     jupyter notebook
     ```
-    or
-    ```bash
-    jupyter lab
-    ```
 
-2.  **Open and run the `Customer_Churn_Classification.ipynb` notebook.**
+2.  Open and run the `train.ipynb` notebook.
+
+### Inference
+
+To run inference on an image, use the `inference.py` script:
+
+```bash
+python inference.py --image_path OIP.jpg
+```
